@@ -33,3 +33,73 @@ Open your terminal or command prompt and log in to your Azure account using the 
 
 ```bash
 az login
+```
+This will open a browser window for you to complete the authentication process.
+
+### 2. Configure the ```main.tf``` File
+
+There are two important values you must update in the ```main.tf``` file:
+
+#### A. Set Your Subscription ID
+
+First, find your Azure Subscription ID by running:
+
+```bash
+az account show
+```
+Copy the ```id``` value from the JSON output. Then, open ```main.tf``` and find the ```provider "azurerm"``` block. Replace the placeholder with your actual Subscription ID:
+
+```hcl
+provider "azurerm" {
+  features {}
+
+  # Replace the placeholder below with your actual Subscription ID
+  subscription_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+}
+```
+
+#### B. Choose a Unique App Service Name
+
+The App Service name must be globally unique across all of Azure because it becomes part of a public DNS name (```your-unique-name.azurewebsites.net```).
+
+Find the ```azurerm_linux_web_app``` resource block and change the ```name``` attribute to something unique:
+
+```hcl
+resource "azurerm_linux_web_app" "app" {
+  # Change the name below to something globally unique
+  name                = "my-very-unique-app-name-and-date"
+  # ... other settings
+}
+```
+
+## How to Run
+
+Once you have completed the setup, you can run the standard Terraform workflow from your terminal in the same directory as the main.tf file.
+### 1. Initialize Terraform
+
+This command downloads the necessary Azure provider plugins:
+```hcl
+terraform init
+```
+### 2. Plan the Deployment
+
+This command shows you an execution plan of what resources Terraform will create, change, or destroy:
+```hcl
+terraform plan
+```
+### 3. Apply the Configuration
+
+This command will build the infrastructure in your Azure account:
+```hcl
+terraform apply
+```
+Terraform will ask for confirmation before proceeding. Type ```yes``` and press Enter.
+
+After the deployment is complete, you will see the ```github_actions_secret``` output in your terminal. You will need this for the next phase of setting up your CI/CD pipeline.
+## Cleaning Up
+
+When you are finished with the resources and want to remove them from your Azure account to avoid incurring costs, run:
+```hcl
+terraform destroy
+```
+Terraform will show you all the resources that will be deleted and ask for confirmation. Type yes to proceed.
