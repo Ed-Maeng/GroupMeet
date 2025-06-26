@@ -39,11 +39,16 @@ Fill the `.env` file with your specific configuration:
 # Server Configuration
 PORT=8080
 
-# Database Connection URL (replace with your actual credentials)
-DATABASE_URL="postgres://YOUR_USER:YOUR_PASSWORD@localhost:5432/groupmeet?sslmode=disable"
+# Database Connections
+DB_HOST=gmt-prod-eus-pgflex.postgres.database.azure.com
+DB_PORT=5432
+DB_NAME=groupmeet_db
+DB_USER=<REPLACE>
+DB_PASSWORD=<REPLACE>
+DB_AUTH_METHOD=password
 
 # JWT Secret Key (MUST be a long, random string for security)
-JWT_KEY="your-very-long-and-super-secret-key-for-jwt"
+JWT_KEY=<REPLACE>
 ```
 
 5. Run the Server

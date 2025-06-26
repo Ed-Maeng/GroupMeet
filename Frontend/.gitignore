@@ -1,0 +1,77 @@
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependency directories
+node_modules/
+vendor/
+dist/
+build/
+target/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+.env
+.env.*
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Go
+*.exe
+*.test
+*.out
+
+# Rust
+/target/
+**/*.rs.bk
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+
+# Environment/Secrets
+.env
+*.env
+*.pem
+*.key
+*.crt
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.iml
+*.swp
+
+# Coverage reports
+coverage/
+*.lcov
+*.nyc_output
+
+# Others
+*.bak
+*.tmp
+*.old
+*.orig
+
+# Git
+*.orig
+*.patch
+*.rej
+*.diff
