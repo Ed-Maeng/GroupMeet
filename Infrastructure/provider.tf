@@ -1,0 +1,14 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = ">= 4.0"
+    }
+  }
+}
+
+provider "azurerm" {
+  features {}
+  
+  subscription_id = "" # <-- IMPORTANT: Replace with your Azure subscription ID
+}
