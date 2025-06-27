@@ -1,6 +1,6 @@
-# GroupMeet - Backend API
+# Chingu - Backend
 
-This directory contains the Go-based backend server for the GroupMeet application. It provides a RESTful API for handling user authentication, event management, and real-time chat.
+This directory contains the Go-based backend server for the Chingu application. It provides a RESTful API for handling user authentication, event management, and real-time chat.
 
 ---
 
@@ -14,7 +14,7 @@ This directory contains the Go-based backend server for the GroupMeet applicatio
 1. Clone the Repository
 ```bash
 git clone <your-repository-url>
-cd GroupMeet/Backend
+cd /Backend
 ```
 
 2. Install Dependencies
@@ -27,7 +27,6 @@ go mod tidy
 You need to create a database in your PostgreSQL instance. Then, you can use the provided `schema.sql` file to set up the necessary tables.
 ```bash
 CREATE DATABASE groupmeet;
-\c groupmeet
 \i path/to/your/schema.sql
 ```
 
@@ -57,6 +56,8 @@ go run main.go
 ```
 
 The server will start and listen on the port specified in your .env file (e.g., http://localhost:8080).
+
+---
 
 ## API Endpoints
 All endpoints are prefixed with `/v1`.

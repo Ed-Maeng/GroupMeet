@@ -1,6 +1,6 @@
-# GroupMeet
+# Chingu
 
-GroupMeet is an IOS application designed to help people discover and join local events based on shared interests and preferences. It provides a platform for event creation, participation, and real-time communication among attendees.
+Chingu is an IOS application designed to help people discover and join local events based on shared interests and preferences. It provides a platform for event creation, participation, and real-time communication among attendees.
 
 ---
 
