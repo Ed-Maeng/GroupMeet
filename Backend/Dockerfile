@@ -5,9 +5,9 @@ FROM golang:1.23-bookworm AS builder
 WORKDIR /app
 
 # Copy go.mod, go.sum, and the vendor directory first.
-COPY go.mod ./
+COPY go.mod go.sum ./
 
-RUN go mod tidy
+RUN go mod vendor
 
 # Copy the rest of your application's source code.
 COPY . .
