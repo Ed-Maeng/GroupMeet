@@ -1,0 +1,85 @@
+# .github/workflows/azure-container-registry.yml
+#
+# This is the complete workflow to:
+# 1. Securely build a Docker image using build-time secrets (via Docker BuildKit).
+# 2. Push the final image to Azure Container Registry.
+# 3. Runtime environment variables (like database URLs) should be configured separately
+#    in Azure App Service > Application Settings, as shown in the Terraform file.
+#
+# -----------------------------------------------------------------------------
+# --- Prerequisites ---
+#
+# 1. Azure Service Principal:
+#    Create an Azure Service Principal with the 'AcrPush' role on your ACR.
+#    az ad sp create-for-rbac --name "GitHubActionsACR" --role AcrPush --scopes /subscriptions/{id}/resourceGroups/{rg}/providers/Microsoft.ContainerRegistry/registries/{acr} --sdk-auth
+#
+# 2. GitHub Secrets:
+#    - AZURE_CREDENTIALS: Create a secret with the full JSON output from the command above.
+#    - MY_API_KEY: Create a secret containing the API key needed during the build.
+#
+# -----------------------------------------------------------------------------
+
+name: Securely Build and Push Docker Image to ACR
+
+# Triggers the workflow on push events to the main branch when files in /Backend change.
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'Backend/**'
+  workflow_dispatch: # Allows manual triggering from the Actions tab
+
+# Environment variables available to all jobs and steps in the workflow
+env:
+  # IMPORTANT: Update these values to match your Azure resources
+  ACR_NAME: "ChinguContainerRegistry"
+  IMAGE_NAME: "webapp/chinguimage"
+
+jobs:
+  build-and-push-securely:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Check out the repository code
+      - name: 'Checkout GitHub Action'
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Docker Buildx
+      # Buildx is a Docker component that enables advanced features like secret mounts.
+      - name: 'Set up Docker Buildx'
+        uses: docker/setup-buildx-action@v3
+
+      # Step 3: Log in to Azure
+      # Uses the AZURE_CREDENTIALS secret to authenticate with your Azure account.
+      - name: 'Login to Azure'
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      # Step 4: Log in to Azure Container Registry
+      - name: 'Login to Azure Container Registry'
+        uses: azure/docker-login@v1
+        with:
+          login-server: ${{ env.ACR_NAME }}.azurecr.io
+
+      # Step 5: Build and push the Docker image with secrets
+      - name: 'Build and push Docker image to ACR'
+        uses: docker/build-push-action@v5
+        with:
+          # Sets the build context to the /Backend directory
+          context: ./Backend
+          push: true
+          tags: |
+            ${{ env.ACR_NAME }}.azurecr.io/${{ env.IMAGE_NAME }}:latest
+            ${{ env.ACR_NAME }}.azurecr.io/${{ env.IMAGE_NAME }}:${{ github.sha }}
+          # The 'secrets' input securely passes GitHub secrets to the Docker build.
+          # This makes the content of the `MY_API_KEY` GitHub secret available
+          # inside the Dockerfile to any RUN command that mounts it.
+          secrets: API_KEY_SECRET=${{ secrets.MY_API_KEY }}
+
+      # Step 6: Logout of Azure
+      # Good practice to log out at the end of the workflow.
+      - name: 'Logout of Azure'
+        run: |
+          az logout
+          az cache purge
+          az account clear
