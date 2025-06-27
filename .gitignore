@@ -22,7 +22,6 @@ bin/
 .vscode/
 
 # Go modules & tools
-go.sum
 go.work.sum
 
 # ===================
