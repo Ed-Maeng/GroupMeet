@@ -5,16 +5,13 @@ FROM golang:1.23-bookworm AS builder
 WORKDIR /app
 
 # Copy go.mod, go.sum, and the vendor directory first.
-COPY go.mod go.sum ./
+COPY . .
 
 RUN go mod tidy
 
 RUN go mod vendor
 
 RUN go mod verify
-
-# Copy the rest of your application's source code.
-COPY . .
 
 # Build the application using the vendored modules.
 RUN CGO_ENABLED=0 GOOS=linux go build -mod=vendor -v -o /app/main .
