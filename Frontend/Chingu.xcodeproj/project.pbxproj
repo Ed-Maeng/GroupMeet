@@ -9,28 +9,39 @@
 /* Begin PBXBuildFile section */
 		15B120632E0CBCF500DA825A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15B1205F2E0CBCF500DA825A /* Assets.xcassets */; };
 		15B120642E0CBCF500DA825A /* ChinguApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120602E0CBCF500DA825A /* ChinguApp.swift */; };
-		15B1206B2E0CBD3300DA825A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1206A2E0CBD2D00DA825A /* ContentView.swift */; };
-		15B1206D2E0CBD5700DA825A /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1206C2E0CBD5000DA825A /* SplashScreenView.swift */; };
-		15B1206F2E0CBD6100DA825A /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1206E2E0CBD5C00DA825A /* SignInPage.swift */; };
-		15B120712E0CBD7200DA825A /* EventsFeedPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120702E0CBD6900DA825A /* EventsFeedPage.swift */; };
-		15B120732E0CBD7B00DA825A /* PostEventPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120722E0CBD7600DA825A /* PostEventPage.swift */; };
-		15B120752E0CBD8400DA825A /* ChatListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120742E0CBD7F00DA825A /* ChatListPage.swift */; };
-		15B120772E0CBD8C00DA825A /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120762E0CBD8800DA825A /* ProfilePage.swift */; };
-		15B1207A2E0CBDA400DA825A /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120792E0CBDA100DA825A /* Header.swift */; };
-		15B1207C2E0CBDAB00DA825A /* EventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1207B2E0CBDA700DA825A /* EventCard.swift */; };
-		15B1207E2E0CBDB200DA825A /* BottomNavbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1207D2E0CBDAE00DA825A /* BottomNavbar.swift */; };
-		15B120802E0CBDBE00DA825A /* NavBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1207F2E0CBDB600DA825A /* NavBarItem.swift */; };
-		15B120822E0CBDC800DA825A /* ProfileActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120812E0CBDC100DA825A /* ProfileActionButton.swift */; };
-		15B120862E0CBDE400DA825A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120852E0CBDE100DA825A /* User.swift */; };
-		15B120882E0CBDEA00DA825A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120872E0CBDE700DA825A /* Event.swift */; };
-		15B1208B2E0CBDFC00DA825A /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1208A2E0CBDFA00DA825A /* Chat.swift */; };
-		15B1208D2E0CBEA100DA825A /* SplashScreenView 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1208C2E0CBEA100DA825A /* SplashScreenView 2.swift */; };
-		15B120902E0CC3ED00DA825A /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1208F2E0CC3E500DA825A /* Color+Extensions.swift */; };
-		15B120922E0CC53000DA825A /* SortOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120912E0CC52D00DA825A /* SortOrder.swift */; };
-		15B120942E0CC77800DA825A /* EventDetialPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120932E0CC77200DA825A /* EventDetialPage.swift */; };
-		15B120962E0CCE9200DA825A /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120952E0CCE8C00DA825A /* ChatMessage.swift */; };
-		15B120982E0CCEA900DA825A /* ChatDetialPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120972E0CCEA400DA825A /* ChatDetialPage.swift */; };
-		15B1209A2E0CCFA900DA825A /* ChatCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120992E0CCFA700DA825A /* ChatCard.swift */; };
+		15BD3C852E1A2ABC00709DF6 /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3C842E1A2AB800709DF6 /* SignInPage.swift */; };
+		15BD3C872E1A2ADD00709DF6 /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3C862E1A2ADA00709DF6 /* SignUpPage.swift */; };
+		15BD3C892E1A2B2B00709DF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3C882E1A2B2500709DF6 /* ContentView.swift */; };
+		15BD3C8B2E1A2BB000709DF6 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3C8A2E1A2BA900709DF6 /* SplashScreenView.swift */; };
+		15BD3C8D2E1A2C1500709DF6 /* ProfileSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3C8C2E1A2C0D00709DF6 /* ProfileSetupView.swift */; };
+		15BD3C8F2E1A2C5000709DF6 /* RegistrationAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3C8E2E1A2C3B00709DF6 /* RegistrationAnimationView.swift */; };
+		15BD3C912E1A2D3300709DF6 /* EventsFeedPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3C902E1A2D2D00709DF6 /* EventsFeedPage.swift */; };
+		15BD3C932E1A2D7500709DF6 /* MyEventsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3C922E1A2D7100709DF6 /* MyEventsPage.swift */; };
+		15BD3C952E1A2DD000709DF6 /* PostEventPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3C942E1A2DCC00709DF6 /* PostEventPage.swift */; };
+		15BD3C972E1A2DFA00709DF6 /* ChatListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3C962E1A2DF400709DF6 /* ChatListPage.swift */; };
+		15BD3C992E1A2E1A00709DF6 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3C982E1A2E1700709DF6 /* ProfilePage.swift */; };
+		15BD3C9B2E1A2E4D00709DF6 /* EventDetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3C9A2E1A2E4700709DF6 /* EventDetailPage.swift */; };
+		15BD3C9D2E1A2E7B00709DF6 /* ChatDetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3C9C2E1A2E7600709DF6 /* ChatDetailPage.swift */; };
+		15BD3C9F2E1A2EBA00709DF6 /* AttendeesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3C9E2E1A2EB400709DF6 /* AttendeesListView.swift */; };
+		15BD3CA12E1A2EF200709DF6 /* PublicProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CA02E1A2EE900709DF6 /* PublicProfileView.swift */; };
+		15BD3CA32E1A2F3900709DF6 /* NewEventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CA22E1A2F3400709DF6 /* NewEventCard.swift */; };
+		15BD3CA52E1A2F6100709DF6 /* TrendingEventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CA42E1A2F5C00709DF6 /* TrendingEventCard.swift */; };
+		15BD3CA72E1A2F8A00709DF6 /* MyEventManagementCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CA62E1A2F8300709DF6 /* MyEventManagementCard.swift */; };
+		15BD3CA92E1A2FB400709DF6 /* ChatCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CA82E1A2FB100709DF6 /* ChatCard.swift */; };
+		15BD3CAB2E1A2FC200709DF6 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CAA2E1A2FBE00709DF6 /* ChatBubble.swift */; };
+		15BD3CAD2E1A300B00709DF6 /* SocialLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CAC2E1A300400709DF6 /* SocialLoginButton.swift */; };
+		15BD3CAF2E1A302A00709DF6 /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CAE2E1A302300709DF6 /* FormField.swift */; };
+		15BD3CB12E1A305E00709DF6 /* AttendeeIconsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CB02E1A305600709DF6 /* AttendeeIconsView.swift */; };
+		15BD3CB32E1A30D700709DF6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CB22E1A30D400709DF6 /* User.swift */; };
+		15BD3CB52E1A30DD00709DF6 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CB42E1A30DC00709DF6 /* Event.swift */; };
+		15BD3CB92E1A311400709DF6 /* Attendee1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CB82E1A310F00709DF6 /* Attendee1.swift */; };
+		15BD3CBC2E1A319000709DF6 /* Chat1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CBB2E1A317500709DF6 /* Chat1.swift */; };
+		15BD3CBE2E1A31A400709DF6 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CBD2E1A31A000709DF6 /* ChatMessage.swift */; };
+		15BD3CC02E1A31B600709DF6 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CBF2E1A31B300709DF6 /* University.swift */; };
+		15BD3CC22E1A31C700709DF6 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CC12E1A31C400709DF6 /* Interest.swift */; };
+		15BD3CC42E1A31DD00709DF6 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CC32E1A31DC00709DF6 /* Badge.swift */; };
+		15BD3CC72E1A323700709DF6 /* Color+Extensions.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CC62E1A322C00709DF6 /* Color+Extensions.swift.swift */; };
+		15BD3CCB2E1A33BE00709DF6 /* Binding+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CCA2E1A33B600709DF6 /* Binding+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,28 +67,39 @@
 		15B120382E0CAFEF00DA825A /* ChinguUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChinguUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B1205F2E0CBCF500DA825A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15B120602E0CBCF500DA825A /* ChinguApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChinguApp.swift; sourceTree = "<group>"; };
-		15B1206A2E0CBD2D00DA825A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		15B1206C2E0CBD5000DA825A /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
-		15B1206E2E0CBD5C00DA825A /* SignInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
-		15B120702E0CBD6900DA825A /* EventsFeedPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsFeedPage.swift; sourceTree = "<group>"; };
-		15B120722E0CBD7600DA825A /* PostEventPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEventPage.swift; sourceTree = "<group>"; };
-		15B120742E0CBD7F00DA825A /* ChatListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListPage.swift; sourceTree = "<group>"; };
-		15B120762E0CBD8800DA825A /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
-		15B120792E0CBDA100DA825A /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
-		15B1207B2E0CBDA700DA825A /* EventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCard.swift; sourceTree = "<group>"; };
-		15B1207D2E0CBDAE00DA825A /* BottomNavbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavbar.swift; sourceTree = "<group>"; };
-		15B1207F2E0CBDB600DA825A /* NavBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarItem.swift; sourceTree = "<group>"; };
-		15B120812E0CBDC100DA825A /* ProfileActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionButton.swift; sourceTree = "<group>"; };
-		15B120852E0CBDE100DA825A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		15B120872E0CBDE700DA825A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		15B1208A2E0CBDFA00DA825A /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
-		15B1208C2E0CBEA100DA825A /* SplashScreenView 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SplashScreenView 2.swift"; sourceTree = "<group>"; };
-		15B1208F2E0CC3E500DA825A /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
-		15B120912E0CC52D00DA825A /* SortOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOrder.swift; sourceTree = "<group>"; };
-		15B120932E0CC77200DA825A /* EventDetialPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetialPage.swift; sourceTree = "<group>"; };
-		15B120952E0CCE8C00DA825A /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
-		15B120972E0CCEA400DA825A /* ChatDetialPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetialPage.swift; sourceTree = "<group>"; };
-		15B120992E0CCFA700DA825A /* ChatCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCard.swift; sourceTree = "<group>"; };
+		15BD3C842E1A2AB800709DF6 /* SignInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
+		15BD3C862E1A2ADA00709DF6 /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
+		15BD3C882E1A2B2500709DF6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		15BD3C8A2E1A2BA900709DF6 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		15BD3C8C2E1A2C0D00709DF6 /* ProfileSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetupView.swift; sourceTree = "<group>"; };
+		15BD3C8E2E1A2C3B00709DF6 /* RegistrationAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAnimationView.swift; sourceTree = "<group>"; };
+		15BD3C902E1A2D2D00709DF6 /* EventsFeedPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsFeedPage.swift; sourceTree = "<group>"; };
+		15BD3C922E1A2D7100709DF6 /* MyEventsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsPage.swift; sourceTree = "<group>"; };
+		15BD3C942E1A2DCC00709DF6 /* PostEventPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEventPage.swift; sourceTree = "<group>"; };
+		15BD3C962E1A2DF400709DF6 /* ChatListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListPage.swift; sourceTree = "<group>"; };
+		15BD3C982E1A2E1700709DF6 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
+		15BD3C9A2E1A2E4700709DF6 /* EventDetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailPage.swift; sourceTree = "<group>"; };
+		15BD3C9C2E1A2E7600709DF6 /* ChatDetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailPage.swift; sourceTree = "<group>"; };
+		15BD3C9E2E1A2EB400709DF6 /* AttendeesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeesListView.swift; sourceTree = "<group>"; };
+		15BD3CA02E1A2EE900709DF6 /* PublicProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicProfileView.swift; sourceTree = "<group>"; };
+		15BD3CA22E1A2F3400709DF6 /* NewEventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventCard.swift; sourceTree = "<group>"; };
+		15BD3CA42E1A2F5C00709DF6 /* TrendingEventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingEventCard.swift; sourceTree = "<group>"; };
+		15BD3CA62E1A2F8300709DF6 /* MyEventManagementCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventManagementCard.swift; sourceTree = "<group>"; };
+		15BD3CA82E1A2FB100709DF6 /* ChatCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCard.swift; sourceTree = "<group>"; };
+		15BD3CAA2E1A2FBE00709DF6 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		15BD3CAC2E1A300400709DF6 /* SocialLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginButton.swift; sourceTree = "<group>"; };
+		15BD3CAE2E1A302300709DF6 /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
+		15BD3CB02E1A305600709DF6 /* AttendeeIconsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendeeIconsView.swift; sourceTree = "<group>"; };
+		15BD3CB22E1A30D400709DF6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		15BD3CB42E1A30DC00709DF6 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		15BD3CB82E1A310F00709DF6 /* Attendee1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendee1.swift; sourceTree = "<group>"; };
+		15BD3CBB2E1A317500709DF6 /* Chat1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat1.swift; sourceTree = "<group>"; };
+		15BD3CBD2E1A31A000709DF6 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		15BD3CBF2E1A31B300709DF6 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
+		15BD3CC12E1A31C400709DF6 /* Interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
+		15BD3CC32E1A31DC00709DF6 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		15BD3CC62E1A322C00709DF6 /* Color+Extensions.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift.swift"; sourceTree = "<group>"; };
+		15BD3CCA2E1A33B600709DF6 /* Binding+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -141,7 +163,7 @@
 		15B120622E0CBCF500DA825A /* Chingu */ = {
 			isa = PBXGroup;
 			children = (
-				15B1208E2E0CC3D400DA825A /* Extentsions */,
+				15BD3CC52E1A322100709DF6 /* Extensions */,
 				15B120842E0CBDDB00DA825A /* Models */,
 				15B120782E0CBD9700DA825A /* Components */,
 				15B120692E0CBD2700DA825A /* Views */,
@@ -162,16 +184,21 @@
 		15B120692E0CBD2700DA825A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				15B120972E0CCEA400DA825A /* ChatDetialPage.swift */,
-				15B120932E0CC77200DA825A /* EventDetialPage.swift */,
-				15B120762E0CBD8800DA825A /* ProfilePage.swift */,
-				15B120742E0CBD7F00DA825A /* ChatListPage.swift */,
-				15B120722E0CBD7600DA825A /* PostEventPage.swift */,
-				15B120702E0CBD6900DA825A /* EventsFeedPage.swift */,
-				15B1206E2E0CBD5C00DA825A /* SignInPage.swift */,
-				15B1206C2E0CBD5000DA825A /* SplashScreenView.swift */,
-				15B1208C2E0CBEA100DA825A /* SplashScreenView 2.swift */,
-				15B1206A2E0CBD2D00DA825A /* ContentView.swift */,
+				15BD3CA02E1A2EE900709DF6 /* PublicProfileView.swift */,
+				15BD3C9E2E1A2EB400709DF6 /* AttendeesListView.swift */,
+				15BD3C9C2E1A2E7600709DF6 /* ChatDetailPage.swift */,
+				15BD3C9A2E1A2E4700709DF6 /* EventDetailPage.swift */,
+				15BD3C982E1A2E1700709DF6 /* ProfilePage.swift */,
+				15BD3C962E1A2DF400709DF6 /* ChatListPage.swift */,
+				15BD3C942E1A2DCC00709DF6 /* PostEventPage.swift */,
+				15BD3C922E1A2D7100709DF6 /* MyEventsPage.swift */,
+				15BD3C902E1A2D2D00709DF6 /* EventsFeedPage.swift */,
+				15BD3C882E1A2B2500709DF6 /* ContentView.swift */,
+				15BD3C8E2E1A2C3B00709DF6 /* RegistrationAnimationView.swift */,
+				15BD3C8C2E1A2C0D00709DF6 /* ProfileSetupView.swift */,
+				15BD3C8A2E1A2BA900709DF6 /* SplashScreenView.swift */,
+				15BD3C862E1A2ADA00709DF6 /* SignUpPage.swift */,
+				15BD3C842E1A2AB800709DF6 /* SignInPage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,12 +206,14 @@
 		15B120782E0CBD9700DA825A /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				15B120992E0CCFA700DA825A /* ChatCard.swift */,
-				15B120812E0CBDC100DA825A /* ProfileActionButton.swift */,
-				15B1207F2E0CBDB600DA825A /* NavBarItem.swift */,
-				15B1207D2E0CBDAE00DA825A /* BottomNavbar.swift */,
-				15B1207B2E0CBDA700DA825A /* EventCard.swift */,
-				15B120792E0CBDA100DA825A /* Header.swift */,
+				15BD3CB02E1A305600709DF6 /* AttendeeIconsView.swift */,
+				15BD3CAE2E1A302300709DF6 /* FormField.swift */,
+				15BD3CAC2E1A300400709DF6 /* SocialLoginButton.swift */,
+				15BD3CAA2E1A2FBE00709DF6 /* ChatBubble.swift */,
+				15BD3CA82E1A2FB100709DF6 /* ChatCard.swift */,
+				15BD3CA62E1A2F8300709DF6 /* MyEventManagementCard.swift */,
+				15BD3CA42E1A2F5C00709DF6 /* TrendingEventCard.swift */,
+				15BD3CA22E1A2F3400709DF6 /* NewEventCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -192,21 +221,25 @@
 		15B120842E0CBDDB00DA825A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				15B120952E0CCE8C00DA825A /* ChatMessage.swift */,
-				15B120912E0CC52D00DA825A /* SortOrder.swift */,
-				15B1208A2E0CBDFA00DA825A /* Chat.swift */,
-				15B120872E0CBDE700DA825A /* Event.swift */,
-				15B120852E0CBDE100DA825A /* User.swift */,
+				15BD3CC32E1A31DC00709DF6 /* Badge.swift */,
+				15BD3CC12E1A31C400709DF6 /* Interest.swift */,
+				15BD3CBF2E1A31B300709DF6 /* University.swift */,
+				15BD3CBD2E1A31A000709DF6 /* ChatMessage.swift */,
+				15BD3CBB2E1A317500709DF6 /* Chat1.swift */,
+				15BD3CB82E1A310F00709DF6 /* Attendee1.swift */,
+				15BD3CB42E1A30DC00709DF6 /* Event.swift */,
+				15BD3CB22E1A30D400709DF6 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		15B1208E2E0CC3D400DA825A /* Extentsions */ = {
+		15BD3CC52E1A322100709DF6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				15B1208F2E0CC3E500DA825A /* Color+Extensions.swift */,
+				15BD3CCA2E1A33B600709DF6 /* Binding+Extensions.swift */,
+				15BD3CC62E1A322C00709DF6 /* Color+Extensions.swift.swift */,
 			);
-			path = Extentsions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,29 +384,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15B120962E0CCE9200DA825A /* ChatMessage.swift in Sources */,
-				15B1207A2E0CBDA400DA825A /* Header.swift in Sources */,
-				15B120772E0CBD8C00DA825A /* ProfilePage.swift in Sources */,
-				15B1208B2E0CBDFC00DA825A /* Chat.swift in Sources */,
-				15B120922E0CC53000DA825A /* SortOrder.swift in Sources */,
+				15BD3C872E1A2ADD00709DF6 /* SignUpPage.swift in Sources */,
+				15BD3C9D2E1A2E7B00709DF6 /* ChatDetailPage.swift in Sources */,
+				15BD3C852E1A2ABC00709DF6 /* SignInPage.swift in Sources */,
+				15BD3CB32E1A30D700709DF6 /* User.swift in Sources */,
+				15BD3CB12E1A305E00709DF6 /* AttendeeIconsView.swift in Sources */,
+				15BD3CA92E1A2FB400709DF6 /* ChatCard.swift in Sources */,
+				15BD3CA72E1A2F8A00709DF6 /* MyEventManagementCard.swift in Sources */,
+				15BD3C8B2E1A2BB000709DF6 /* SplashScreenView.swift in Sources */,
+				15BD3C952E1A2DD000709DF6 /* PostEventPage.swift in Sources */,
+				15BD3C892E1A2B2B00709DF6 /* ContentView.swift in Sources */,
+				15BD3C932E1A2D7500709DF6 /* MyEventsPage.swift in Sources */,
+				15BD3C992E1A2E1A00709DF6 /* ProfilePage.swift in Sources */,
+				15BD3CB52E1A30DD00709DF6 /* Event.swift in Sources */,
+				15BD3CA32E1A2F3900709DF6 /* NewEventCard.swift in Sources */,
+				15BD3CB92E1A311400709DF6 /* Attendee1.swift in Sources */,
+				15BD3CA52E1A2F6100709DF6 /* TrendingEventCard.swift in Sources */,
+				15BD3C9F2E1A2EBA00709DF6 /* AttendeesListView.swift in Sources */,
+				15BD3CAB2E1A2FC200709DF6 /* ChatBubble.swift in Sources */,
+				15BD3C972E1A2DFA00709DF6 /* ChatListPage.swift in Sources */,
+				15BD3CBC2E1A319000709DF6 /* Chat1.swift in Sources */,
+				15BD3CBE2E1A31A400709DF6 /* ChatMessage.swift in Sources */,
+				15BD3C9B2E1A2E4D00709DF6 /* EventDetailPage.swift in Sources */,
+				15BD3CAD2E1A300B00709DF6 /* SocialLoginButton.swift in Sources */,
+				15BD3C8D2E1A2C1500709DF6 /* ProfileSetupView.swift in Sources */,
+				15BD3CC72E1A323700709DF6 /* Color+Extensions.swift.swift in Sources */,
+				15BD3CCB2E1A33BE00709DF6 /* Binding+Extensions.swift in Sources */,
+				15BD3CC22E1A31C700709DF6 /* Interest.swift in Sources */,
+				15BD3CC42E1A31DD00709DF6 /* Badge.swift in Sources */,
+				15BD3C912E1A2D3300709DF6 /* EventsFeedPage.swift in Sources */,
+				15BD3CAF2E1A302A00709DF6 /* FormField.swift in Sources */,
+				15BD3CA12E1A2EF200709DF6 /* PublicProfileView.swift in Sources */,
+				15BD3C8F2E1A2C5000709DF6 /* RegistrationAnimationView.swift in Sources */,
 				15B120642E0CBCF500DA825A /* ChinguApp.swift in Sources */,
-				15B120802E0CBDBE00DA825A /* NavBarItem.swift in Sources */,
-				15B1207C2E0CBDAB00DA825A /* EventCard.swift in Sources */,
-				15B1207E2E0CBDB200DA825A /* BottomNavbar.swift in Sources */,
-				15B1209A2E0CCFA900DA825A /* ChatCard.swift in Sources */,
-				15B120822E0CBDC800DA825A /* ProfileActionButton.swift in Sources */,
-				15B120882E0CBDEA00DA825A /* Event.swift in Sources */,
-				15B120862E0CBDE400DA825A /* User.swift in Sources */,
-				15B1208D2E0CBEA100DA825A /* SplashScreenView 2.swift in Sources */,
-				15B120902E0CC3ED00DA825A /* Color+Extensions.swift in Sources */,
-				15B1206B2E0CBD3300DA825A /* ContentView.swift in Sources */,
-				15B120732E0CBD7B00DA825A /* PostEventPage.swift in Sources */,
-				15B120712E0CBD7200DA825A /* EventsFeedPage.swift in Sources */,
-				15B1206D2E0CBD5700DA825A /* SplashScreenView.swift in Sources */,
-				15B120752E0CBD8400DA825A /* ChatListPage.swift in Sources */,
-				15B120942E0CC77800DA825A /* EventDetialPage.swift in Sources */,
-				15B1206F2E0CBD6100DA825A /* SignInPage.swift in Sources */,
-				15B120982E0CCEA900DA825A /* ChatDetialPage.swift in Sources */,
+				15BD3CC02E1A31B600709DF6 /* University.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
