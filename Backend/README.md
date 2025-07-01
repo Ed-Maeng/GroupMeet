@@ -13,7 +13,7 @@ This directory contains the Go-based backend server for the Chingu application. 
 
 1. Clone the Repository
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/Ed-Maeng/Chingu.git
 cd /Backend
 ```
 
