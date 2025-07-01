@@ -35,24 +35,4 @@ Each directory has its own specific `README.md` with detailed setup and usage in
 
 ## Getting Started
 
-To get the full application running, you will need to start both the backend and frontend services.
-
-### 1. Frontend Setup
-
-Navigate to the backend directory and follow the instructions in `Frontend/README.md`.
-
-```bash
-cd Frontend/
-# Follow the setup instructions in Frontend/README.md
-swift main.swift
-```
-
-### 2. Backend Setup
-
-Navigate to the backend directory and follow the instructions in `Backend/README.md`.
-
-```bash
-cd Backend/
-# Follow the setup instructions in Backend/README.md
-go run main.go
-```
+To get the full application running, you will need to start both the frontend and backend services.

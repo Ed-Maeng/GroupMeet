@@ -1,4 +1,4 @@
-# Chingu
+# Chingu - Frontend
 
 Chingu is an iOS application designed to help university students discover, create, and join local campus events. It provides a platform for event creation, participation, and communication among attendees, with the goal of fostering a vibrant and connected campus community.
 
@@ -48,7 +48,7 @@ This project is a self-contained front-end prototype that can be run directly in
 
 1.  **Clone the Repository**
     ```bash
-    git clone <your-repository-url>
+    git clone https://github.com/Ed-Maeng/Chingu.git
     cd Chingu
     ```
 

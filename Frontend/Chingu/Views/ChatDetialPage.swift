@@ -39,8 +39,7 @@ struct ChatDetailPage: View {
                         }
                     }
                     .padding()
-                    .onChange(of: messages.count) { _ in
-                        // Auto-scroll to the bottom when a new message is added
+                    .onChange(of: messages.count) {
                         if let lastMessage = messages.last {
                             withAnimation {
                                 scrollViewProxy.scrollTo(lastMessage.id, anchor: .bottom)
