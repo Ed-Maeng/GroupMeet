@@ -40,12 +40,22 @@ struct ContentView: View {
                 .transition(.move(edge: .bottom))
             }
             
-            // If a chat is selected, slide the ChatDetailPage up from the bottom
-            if let chat = selectedChat {
-                ChatDetailPage(chat: chat, onDismiss: {
-                    // This closure is called by the detail page's back button
-                    selectedChat = nil
-                })
+            // Assuming you have these values available in ContentView after a user logs in
+            // IMPORTANT: Replace with your actual authentication token and user ID
+            let mockAuthToken: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMiwiaXNzIjoiZ3JvdXBtZWV0LWFwaSIsImV4cCI6MTc1MTU5NjAzNiwiaWF0IjoxNzUxNTA5NjM2fQ.QeGI6bcAatzyZyA3sA_tGBxC-6yp0aCsJUVYoVP63GU"
+            let mockCurrentUserID: Int = 12 // Replace with the logged-in user's ID (as an Int)
+
+            // ... inside your ContentView's body
+            if let chat = selectedChat { // selectedChat is of type Chat? (Optional<Chat>)
+                ChatDetailPage(
+                    chat: chat, // Pass the unwrapped Chat object
+                    onDismiss: {
+                        // Define what happens when the ChatDetailPage requests dismissal
+                        selectedChat = nil // This will dismiss the sheet
+                    },
+                    authToken: mockAuthToken, // Pass your authentication token
+                    currentUserID: mockCurrentUserID // Pass the current user's ID
+                )
                 .transition(.move(edge: .bottom))
             }
         }

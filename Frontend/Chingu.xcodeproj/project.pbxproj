@@ -23,14 +23,15 @@
 		15B120822E0CBDC800DA825A /* ProfileActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120812E0CBDC100DA825A /* ProfileActionButton.swift */; };
 		15B120862E0CBDE400DA825A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120852E0CBDE100DA825A /* User.swift */; };
 		15B120882E0CBDEA00DA825A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120872E0CBDE700DA825A /* Event.swift */; };
-		15B1208B2E0CBDFC00DA825A /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1208A2E0CBDFA00DA825A /* Chat.swift */; };
 		15B1208D2E0CBEA100DA825A /* SplashScreenView 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1208C2E0CBEA100DA825A /* SplashScreenView 2.swift */; };
 		15B120902E0CC3ED00DA825A /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1208F2E0CC3E500DA825A /* Color+Extensions.swift */; };
 		15B120922E0CC53000DA825A /* SortOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120912E0CC52D00DA825A /* SortOrder.swift */; };
 		15B120942E0CC77800DA825A /* EventDetialPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120932E0CC77200DA825A /* EventDetialPage.swift */; };
 		15B120962E0CCE9200DA825A /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120952E0CCE8C00DA825A /* ChatMessage.swift */; };
-		15B120982E0CCEA900DA825A /* ChatDetialPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120972E0CCEA400DA825A /* ChatDetialPage.swift */; };
+		15B120982E0CCEA900DA825A /* ChatDetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120972E0CCEA400DA825A /* ChatDetailPage.swift */; };
 		15B1209A2E0CCFA900DA825A /* ChatCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B120992E0CCFA700DA825A /* ChatCard.swift */; };
+		63FEB2972E1632CF00EC7527 /* APIChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FEB2962E1632C500EC7527 /* APIChatMessage.swift */; };
+		63FEB2992E16340400EC7527 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FEB2982E16340100EC7527 /* Chat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,14 +71,16 @@
 		15B120812E0CBDC100DA825A /* ProfileActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionButton.swift; sourceTree = "<group>"; };
 		15B120852E0CBDE100DA825A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		15B120872E0CBDE700DA825A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		15B1208A2E0CBDFA00DA825A /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		15B1208C2E0CBEA100DA825A /* SplashScreenView 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SplashScreenView 2.swift"; sourceTree = "<group>"; };
 		15B1208F2E0CC3E500DA825A /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		15B120912E0CC52D00DA825A /* SortOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOrder.swift; sourceTree = "<group>"; };
 		15B120932E0CC77200DA825A /* EventDetialPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetialPage.swift; sourceTree = "<group>"; };
 		15B120952E0CCE8C00DA825A /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
-		15B120972E0CCEA400DA825A /* ChatDetialPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetialPage.swift; sourceTree = "<group>"; };
+		15B120972E0CCEA400DA825A /* ChatDetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailPage.swift; sourceTree = "<group>"; };
 		15B120992E0CCFA700DA825A /* ChatCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCard.swift; sourceTree = "<group>"; };
+		63FEB2962E1632C500EC7527 /* APIChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIChatMessage.swift; sourceTree = "<group>"; };
+		63FEB2982E16340100EC7527 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		63FEB29A2E163AA700EC7527 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -141,6 +144,7 @@
 		15B120622E0CBCF500DA825A /* Chingu */ = {
 			isa = PBXGroup;
 			children = (
+				63FEB29A2E163AA700EC7527 /* Info.plist */,
 				15B1208E2E0CC3D400DA825A /* Extentsions */,
 				15B120842E0CBDDB00DA825A /* Models */,
 				15B120782E0CBD9700DA825A /* Components */,
@@ -162,7 +166,7 @@
 		15B120692E0CBD2700DA825A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				15B120972E0CCEA400DA825A /* ChatDetialPage.swift */,
+				15B120972E0CCEA400DA825A /* ChatDetailPage.swift */,
 				15B120932E0CC77200DA825A /* EventDetialPage.swift */,
 				15B120762E0CBD8800DA825A /* ProfilePage.swift */,
 				15B120742E0CBD7F00DA825A /* ChatListPage.swift */,
@@ -192,9 +196,10 @@
 		15B120842E0CBDDB00DA825A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				63FEB2982E16340100EC7527 /* Chat.swift */,
+				63FEB2962E1632C500EC7527 /* APIChatMessage.swift */,
 				15B120952E0CCE8C00DA825A /* ChatMessage.swift */,
 				15B120912E0CC52D00DA825A /* SortOrder.swift */,
-				15B1208A2E0CBDFA00DA825A /* Chat.swift */,
 				15B120872E0CBDE700DA825A /* Event.swift */,
 				15B120852E0CBDE100DA825A /* User.swift */,
 			);
@@ -354,10 +359,10 @@
 				15B120962E0CCE9200DA825A /* ChatMessage.swift in Sources */,
 				15B1207A2E0CBDA400DA825A /* Header.swift in Sources */,
 				15B120772E0CBD8C00DA825A /* ProfilePage.swift in Sources */,
-				15B1208B2E0CBDFC00DA825A /* Chat.swift in Sources */,
 				15B120922E0CC53000DA825A /* SortOrder.swift in Sources */,
 				15B120642E0CBCF500DA825A /* ChinguApp.swift in Sources */,
 				15B120802E0CBDBE00DA825A /* NavBarItem.swift in Sources */,
+				63FEB2992E16340400EC7527 /* Chat.swift in Sources */,
 				15B1207C2E0CBDAB00DA825A /* EventCard.swift in Sources */,
 				15B1207E2E0CBDB200DA825A /* BottomNavbar.swift in Sources */,
 				15B1209A2E0CCFA900DA825A /* ChatCard.swift in Sources */,
@@ -365,6 +370,7 @@
 				15B120882E0CBDEA00DA825A /* Event.swift in Sources */,
 				15B120862E0CBDE400DA825A /* User.swift in Sources */,
 				15B1208D2E0CBEA100DA825A /* SplashScreenView 2.swift in Sources */,
+				63FEB2972E1632CF00EC7527 /* APIChatMessage.swift in Sources */,
 				15B120902E0CC3ED00DA825A /* Color+Extensions.swift in Sources */,
 				15B1206B2E0CBD3300DA825A /* ContentView.swift in Sources */,
 				15B120732E0CBD7B00DA825A /* PostEventPage.swift in Sources */,
@@ -373,7 +379,7 @@
 				15B120752E0CBD8400DA825A /* ChatListPage.swift in Sources */,
 				15B120942E0CC77800DA825A /* EventDetialPage.swift in Sources */,
 				15B1206F2E0CBD6100DA825A /* SignInPage.swift in Sources */,
-				15B120982E0CCEA900DA825A /* ChatDetialPage.swift in Sources */,
+				15B120982E0CCEA900DA825A /* ChatDetailPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,14 +541,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 46L395PUZZ;
+				DEVELOPMENT_TEAM = 69552UBXVC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Chingu/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -550,9 +558,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "-.Chingu";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -563,14 +573,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 46L395PUZZ;
+				DEVELOPMENT_TEAM = 69552UBXVC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Chingu/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -578,9 +590,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "-.Chingu";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

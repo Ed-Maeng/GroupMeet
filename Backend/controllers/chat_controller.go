@@ -17,7 +17,7 @@ import (
 func isUserParticipant(c *gin.Context, userID int, eventID int) (bool, error) {
 	var exists bool
 	// This query efficiently checks for the existence of a record without retrieving any data.
-	query := `SELECT EXISTS(SELECT 1 FROM event_participants WHERE user_id = $1 AND event_id = $2)`
+	query := `SELECT EXISTS(SELECT 1 FROM EventParticipants WHERE user_id = $1 AND event_id = $2)`
 	err := database.Conn.QueryRow(c.Request.Context(), query, userID, eventID).Scan(&exists)
 	if err != nil {
 		// Log the internal database error.
@@ -46,7 +46,7 @@ func GetUserChatRooms(c *gin.Context) {
 	query := `
         SELECT e.event_id, e.name, e.created_at
         FROM events e
-        JOIN eventparticipants ep ON e.event_id = ep.event_id
+        JOIN EventParticipants ep ON e.event_id = ep.event_id
         WHERE ep.user_id = $1
         ORDER BY e.created_at DESC
     `
@@ -120,7 +120,7 @@ func GetChatRoomMessages(c *gin.Context) {
 	// Fetch messages and join with the users table to get the sender's name for a richer response.
 	query := `
         SELECT cm.message_id, cm.event_id, cm.sender_user_id, u.name, cm.message_text, cm.timestamp
-        FROM chat_messages cm
+        FROM ChatMessages cm
         JOIN users u ON cm.sender_user_id = u.user_id
         WHERE cm.event_id = $1
         ORDER BY cm.timestamp ASC
@@ -197,13 +197,13 @@ func PostChatMessage(c *gin.Context) {
 	var createdMsg models.ChatMessage
 	query := `
         WITH inserted_msg AS (
-            INSERT INTO chat_messages (event_id, sender_user_id, message_text, timestamp)
+            INSERT INTO ChatMessages (event_id, sender_user_id, message_text, timestamp)
             VALUES ($1, $2, $3, $4)
             RETURNING message_id, event_id, sender_user_id, message_text, timestamp
         )
         SELECT im.message_id, im.event_id, im.sender_user_id, u.name, im.message_text, im.timestamp
         FROM inserted_msg im
-        JOIN users u ON im.sender_user_id = u.user_id
+        JOIN Users u ON im.sender_user_id = u.user_id
     `
 	err = database.Conn.QueryRow(c.Request.Context(), query,
 		eventID, userID, req.Content, time.Now().UTC(),

@@ -34,7 +34,7 @@ struct ChatCard: View {
                     .font(.headline)
                     .fontWeight(.semibold)
                     .foregroundColor(.primary)
-                Text(chat.lastMessage)
+                Text("TEMP-Last Message Show up Here")
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                     .lineLimit(1)
@@ -42,7 +42,7 @@ struct ChatCard: View {
 
             Spacer()
 
-            Text(chat.time)
+            Text(chat.createdAt)
                 .font(.caption)
                 .foregroundColor(.secondary)
         }
@@ -58,11 +58,7 @@ struct ChatCard: View {
 struct ChatCard_Previews: PreviewProvider {
     static var previews: some View {
         ChatCard(
-            chat: Chat(
-                name: "UCLA CS 101 Study Group",
-                lastMessage: "Don't forget the midterm is next week!",
-                time: "2h ago"
-            )
+            chat: Chat(id: 1, name: "Soccer Match at UCLA", createdAt: "2025-06-25T16:20:23.934652-07:00")
         )
         .padding()
         .background(Color.gray.opacity(0.2))

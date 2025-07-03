@@ -2,23 +2,29 @@
 //  Chat.swift
 //  Chingu
 //
-//  Created by David Kim on 6/25/25.
+//  Created by David Kim on 7/2/25. // Adjust date as needed
 //
 
 import Foundation
 
-// This struct defines the data model for a single chat conversation preview.
-// It needs to be Identifiable to be used in a list, and Equatable for animations.
-struct Chat: Identifiable, Equatable {
-    // A unique ID for each chat room, required by Identifiable.
-    let id = UUID()
-    
-    // The name of the chat group or person.
+// This struct represents a single chatroom or event, corresponding to your 'events' table.
+// It will be used to pass the context of the selected chatroom to ChatDetailPage.
+struct Chat: Identifiable, Codable, Equatable{
+    // Maps to `event_id` from your DB, used as the Identifiable 'id'
+    let id: Int // Renamed from event_id in JSON to 'id' for Identifiable protocol
+
+    // Maps to `name` from your DB
     let name: String
-    
-    // The last message sent in the chat, for the preview.
-    let lastMessage: String
-    
-    // A string representing when the last message was sent.
-    let time: String
+
+    // Maps to `created_at` from your DB
+    let createdAt: String // Assuming API sends as ISO 8601 string
+
+    // If your backend uses snake_case (event_id, created_at) in the JSON response
+    // for this Chat/Event model, you'll need a CodingKeys enum to map them
+    // to Swift's camelCase properties.
+    enum CodingKeys: String, CodingKey {
+        case id = "event_id"
+        case name
+        case createdAt = "created_at"
+    }
 }

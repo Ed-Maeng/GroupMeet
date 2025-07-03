@@ -13,9 +13,7 @@ struct ChatListPage: View {
     var onChatSelected: (Chat) -> Void
 
     let chats = [
-        Chat(name: "UCLA CS 101 Study Group", lastMessage: "Don't forget the midterm is next week!", time: "2h ago"),
-        Chat(name: "Basketball Pick-up", lastMessage: "Who's playing tomorrow?", time: "Yesterday"),
-        Chat(name: "Board Game Night", lastMessage: "Anyone bringing new games?", time: "3 days ago"),
+        Chat(id: 1, name: "Soccer Match at UCLA", createdAt: "2025-06-25T16:20:23.934652-07:00")
     ]
 
     var body: some View {
