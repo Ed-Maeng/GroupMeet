@@ -2,20 +2,23 @@
 //  Event.swift
 //  Chingu
 //
-//  Created by David Kim on 6/25/25.
+//  Created by David Kim on 7/5/25.
 //
 
-import Foundation
+import SwiftUI
 
-// CHANGED: Added Equatable so SwiftUI can compare two Event objects.
 struct Event: Identifiable, Equatable {
-    let id = UUID()
-    let title: String
-    let date: String
-    let time: String
-    let location: String
-    let type: String
-    let participants: Int
-    let maxCapacity: Int?
-    let isPopular: Bool
+    var id = UUID()
+    var title: String
+    var date: String
+    var time: String
+    var location: String
+    var type: String
+    var participants: Int
+    var totalSlots: Int
+    var imageUrl: String
+    var isPopular: Bool
+    var organizer: String
+    var attendees: [Attendee]
+    var description: String
 }

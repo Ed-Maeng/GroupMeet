@@ -2,121 +2,65 @@
 //  PostEventPage.swift
 //  Chingu
 //
-//  Created by David Kim on 6/25/25.
+//  Created by David Kim on 7/5/25.
 //
 
 import SwiftUI
 
 struct PostEventPage: View {
-    @State private var title: String = ""
-    @State private var description: String = ""
-    @State private var date: Date = Date()
-    @State private var time: Date = Date()
-    @State private var location: String = ""
-    @State private var eventType: String = "Study Group"
-    @State private var maxParticipants: String = ""
-    @State private var visibility: String = "university" // 'public' or 'university'
+    var onSave: (Event) -> Void
+    var eventToEdit: Event?
+    let currentUser: User
 
-    var onCancel: () -> Void
-    var onPostSuccess: () -> Void
-
-    let eventTypes = [
-        "Study Group", "Sports", "Gaming", "Volunteering", "Creative Workshop",
-        "Social Mixer", "Fitness", "Movie Night", "Cultural Event"
-    ]
+    @State private var title = ""; @State private var description = ""; @State private var eventDate = Date(); @State private var location = ""; @State private var eventType = "Study Group"; @State private var maxParticipants = ""; @State private var visibility = "University Only"
+    let eventTypes = ["Study Group", "Sports", "Gaming", "Social", "Volunteering"]
 
     var body: some View {
-        VStack(spacing: 0) {
-            Header(
-                title: "New Event",
-                leftIcon: "xmark", // Close icon
-                onLeftClick: onCancel,
-                rightIcons: ["paperplane.fill"], // Post icon
-                onRightClick: handlePost
-            )
-
-            Form {
-                Section {
-                    TextField("Title", text: $title, prompt: Text("e.g., UCLA CS 32 Study Session"))
-                } header: {
-                    Text("Title")
+        ZStack(alignment: .bottom) {
+            VStack(spacing: 0) {
+                HStack {
+                    Spacer()
+                    Text(eventToEdit == nil ? "New Event" : "Edit Event").font(.headline).bold()
+                    Spacer()
+                }.padding()
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 24) {
+                        FormField(label: "TITLE") { TextField("e.g., UCLA CS 32 Study Session", text: $title) }
+                        FormField(label: "DESCRIPTION") { TextEditor(text: $description).frame(height: 100) }
+                        FormField(label: "DATE & TIME") { DatePicker("Date", selection: $eventDate, displayedComponents: [.date, .hourAndMinute]).labelsHidden() }
+                        FormField(label: "LOCATION") { TextField("e.g., Powell Library, Room 220", text: $location) }
+                        FormField(label: "EVENT TYPE") { Picker("Event Type", selection: $eventType) { ForEach(eventTypes, id: \.self) { Text($0).tag($0) } }.pickerStyle(.menu) }
+                        FormField(label: "MAX PARTICIPANTS") { TextField("Optional", text: $maxParticipants).keyboardType(.numberPad) }
+                        FormField(label: "VISIBILITY") { Picker("Visibility", selection: $visibility) { Text("University Only").tag("University Only"); Text("Public").tag("Public") }.pickerStyle(.segmented) }
+                    }.padding().padding(.bottom, 100)
                 }
-                
-                Section {
-                    TextEditor(text: $description)
-                        .frame(minHeight: 80, maxHeight: 150)
-                } header: {
-                    Text("Description")
-                }
-
-                Section {
-                    DatePicker("Date", selection: $date, displayedComponents: .date)
-                    DatePicker("Time", selection: $time, displayedComponents: .hourAndMinute)
-                } header: {
-                    Text("Date & Time")
-                }
-
-                Section {
-                    TextField("Location", text: $location, prompt: Text("e.g., Powell Library, Room 220"))
-                } header: {
-                    Text("Location")
-                }
-
-                Section {
-                    Picker("Event Type", selection: $eventType) {
-                        ForEach(eventTypes, id: \.self) { type in
-                            Text(type).tag(type)
-                        }
-                    }
-                    .pickerStyle(.menu) // Modern menu picker
-                } header: {
-                    Text("Event Type")
-                }
-
-                Section {
-                    TextField("Max Participants (Optional)", text: $maxParticipants)
-                        .keyboardType(.numberPad)
-                } header: {
-                    Text("Max Participants")
-                }
-
-                Section {
-                    Picker("Visibility", selection: $visibility) {
-                        Text("University Only").tag("university")
-                        Text("Public").tag("public")
-                    }
-                    .pickerStyle(.segmented) // iOS segmented control
-                } header: {
-                    Text("Visibility")
-                }
-                
-                Button(action: handlePost) {
-                    Text("Create Event")
-                        .font(.headline)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color("PrimaryGreen"))
-                        .cornerRadius(10)
-                        .shadow(color: Color("PrimaryGreen").opacity(0.3), radius: 5, x: 0, y: 3)
-                }
-                .buttonStyle(PlainButtonStyle())
-                .listRowBackground(Color.clear) // Remove default list row background
             }
-            .scrollContentBackground(.hidden) // Make form background transparent to use overall background
-            .background(Color.white.ignoresSafeArea()) // Ensure form area is white
+            Button(action: handleSave) {
+                Text(eventToEdit == nil ? "Publish Event" : "Save Changes")
+                    .fontWeight(.bold).foregroundColor(.white).frame(maxWidth: .infinity).padding().background(Color.green).cornerRadius(15)
+            }.padding().background(.thinMaterial)
+        }
+        .onAppear(perform: populateFormForEditing)
+    }
+
+    private func populateFormForEditing() {
+        if let event = eventToEdit {
+            title = event.title
+            description = event.description
+            location = event.location
         }
     }
-    
-    private func handlePost() {
-        if !title.isEmpty && !description.isEmpty && !location.isEmpty {
-            // In a real app, send data to backend
-            print("Event posted: \(title)")
-            onPostSuccess()
+
+    private func handleSave() {
+        let savedEvent: Event
+        if var event = eventToEdit {
+            event.title = title
+            event.description = description
+            event.location = location
+            savedEvent = event
         } else {
-            // In a real app, use an alert or toast
-            print("Please fill in all required fields.")
+            savedEvent = Event(title: title, date: eventDate.formatted(date: .abbreviated, time: .omitted), time: eventDate.formatted(date: .omitted, time: .shortened), location: location, type: eventType, participants: 1, totalSlots: Int(maxParticipants) ?? 0, imageUrl: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60", isPopular: false, organizer: currentUser.fullName, attendees: [], description: description)
         }
+        onSave(savedEvent)
     }
 }
