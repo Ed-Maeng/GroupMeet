@@ -24,7 +24,7 @@ func SetupRoutes() *gin.Engine {
 		})
 
 		// Authentication
-		public.POST("/register", controllers.CreateUser)
+		public.POST("/signup", controllers.CreateUser)
 		public.POST("/login", controllers.LoginUser)
 	}
 

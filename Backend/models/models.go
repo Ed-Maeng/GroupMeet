@@ -3,15 +3,13 @@ package models
 import "time"
 
 type User struct {
-	UserID            int       `db:"user_id" json:"user_id"`
-	PreferenceID      int       `db:"preference_id" json:"preference_id"`
-	Email             string    `db:"email" json:"email"`
-	PasswordHash      string    `db:"password_hash" json:"password"`
-	Name              string    `db:"name" json:"name"`
-	School            string    `db:"school" json:"school"`
-	ProfilePictureURL *string   `db:"profile_picture_url" json:"profile_picture_url"`
-	CreatedAt         time.Time `db:"created_at" json:"created_at"`
-	UpdatedAt         time.Time `db:"updated_at" json:"updated_at"`
+	UserID            int     `db:"user_id" json:"user_id"`
+	PreferenceID      int     `db:"preference_id" json:"preference_id"`
+	Email             string  `db:"email" json:"email"`
+	PasswordHash      string  `db:"password_hash" json:"password"`
+	Name              string  `db:"name" json:"name"`
+	School            string  `db:"school" json:"school"`
+	ProfilePictureURL *string `db:"profile_picture_url" json:"profile_picture_url"`
 }
 
 type LoginRequest struct {

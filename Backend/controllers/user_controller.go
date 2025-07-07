@@ -96,7 +96,7 @@ func GetUser(c *gin.Context) {
 
 	// Query the database for the user
 	query := `
-		SELECT user_id, preference_id, email, name, school, created_at, updated_at
+		SELECT user_id, preference_id, email, name, school
 		FROM users
 		WHERE user_id = $1
 	`
@@ -107,8 +107,6 @@ func GetUser(c *gin.Context) {
 		&user.Email,
 		&user.Name,
 		&user.School,
-		&user.CreatedAt,
-		&user.UpdatedAt,
 	)
 
 	if err != nil {
