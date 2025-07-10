@@ -1,10 +1,3 @@
-//
-//  PostEventPage.swift
-//  Chingu
-//
-//  Created by David Kim on 7/5/25.
-//
-
 import SwiftUI
 
 struct PostEventPage: View {
@@ -59,7 +52,7 @@ struct PostEventPage: View {
             event.location = location
             savedEvent = event
         } else {
-            savedEvent = Event(title: title, date: eventDate.formatted(date: .abbreviated, time: .omitted), time: eventDate.formatted(date: .omitted, time: .shortened), location: location, type: eventType, participants: 1, totalSlots: Int(maxParticipants) ?? 0, imageUrl: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60", isPopular: false, organizer: currentUser.fullName, attendees: [], description: description)
+            savedEvent = Event(title: title, date: eventDate.formatted(date: .abbreviated, time: .omitted), time: eventDate.formatted(date: .omitted, time: .shortened), location: location, type: eventType, participants: 1, totalSlots: Int(maxParticipants) ?? 0, imageUrl: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60", isPopular: false, organizer: currentUser.name, attendees: [], description: description)
         }
         onSave(savedEvent)
     }

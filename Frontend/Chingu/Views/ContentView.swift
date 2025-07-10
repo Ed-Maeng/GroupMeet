@@ -153,32 +153,48 @@ struct ContentView: View {
     func mainTabView(user: User) -> some View {
         VStack(spacing: 0) {
             ZStack {
-                Group {
-                    EventsFeedPage(onEventSelected: { event in activeSheet = .eventDetail(event) }, universityName: user.university, selectedTab: $selectedTab, events: $events).opacity(selectedTab == .events ? 1 : 0)
+                // The switch statement ensures only one view is computed and rendered.
+                switch selectedTab {
+                case .events:
+                    EventsFeedPage(onEventSelected: { event in activeSheet = .eventDetail(event) }, schoolName: user.school, selectedTab: $selectedTab, events: $events)
+                case .myEvents:
                     MyEventsPage(user: user, events: $events, onEditEvent: { event in
                         activeSheet = .eventEdit(event)
                     }, onViewAttendees: { event in
                         activeSheet = .eventAttendees(event)
-                    }).opacity(selectedTab == .myEvents ? 1 : 0)
+                    })
+                case .post:
                     PostEventPage(onSave: { newEvent in
                         events.insert(newEvent, at: 0)
                         let newChat = Chat(id: newEvent.id, name: newEvent.title, lastMessage: "Your event chat is ready!", time: "Now")
                         chats.append(newChat)
                         joinedEventIDs.insert(newEvent.id)
-                        withAnimation { selectedTab = .events }
-                    }, currentUser: user).opacity(selectedTab == .post ? 1 : 0)
-                    ChatListPage(onChatSelected: { chat in activeSheet = .chatDetail(chat) }, chats: $chats).opacity(selectedTab == .chats ? 1 : 0)
-                    ProfilePage(user: $user.toBinding(), onLogOut: { withAnimation(.spring()) { self.user = nil; self.appState = .auth } }).opacity(selectedTab == .profile ? 1 : 0)
-                }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                        selectedTab = .events // No need for withAnimation here, the parent VStack handles it.
+                    }, currentUser: user)
+                case .chats:
+                    ChatListPage(onChatSelected: { chat in activeSheet = .chatDetail(chat) }, chats: $chats)
+                case .profile:
+                    ProfilePage(onLogOut: {
+                        self.user = nil
+                        self.appState = .auth
+                    })
+                }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity) // Recommended for proper layout
+
             HStack {
                 TabBarButton(icon: "house.fill", label: "Events", tab: .events, selectedTab: $selectedTab)
                 TabBarButton(icon: "calendar.badge.plus", label: "My Events", tab: .myEvents, selectedTab: $selectedTab)
                 TabBarButton(icon: "plus.circle.fill", label: "Post", tab: .post, selectedTab: $selectedTab)
                 TabBarButton(icon: "message.fill", label: "Chats", tab: .chats, selectedTab: $selectedTab)
                 TabBarButton(icon: "person.fill", label: "Profile", tab: .profile, selectedTab: $selectedTab)
-            }.padding(.horizontal).padding(.top, 10).background(.thinMaterial)
-        }.animation(.easeInOut(duration: 0.2), value: selectedTab)
+            }
+            .padding(.horizontal)
+            .padding(.top, 10)
+            .background(.thinMaterial)
+        }
+        // This animation modifier will apply to any change triggered by 'selectedTab'.
+        .animation(.easeInOut(duration: 0.2), value: selectedTab)
     }
     
     struct TabBarButton: View {

@@ -1,11 +1,5 @@
-//
-//  MyEventsPage.swift
-//  Chingu
-//
-//  Created by David Kim on 7/5/25.
-//
-
 import SwiftUI
+
 struct MyEventsPage: View {
     let user: User
     @Binding var events: [Event]
@@ -13,7 +7,7 @@ struct MyEventsPage: View {
     var onViewAttendees: (Event) -> Void
     
     var myEvents: [Event] {
-        events.filter { $0.organizer == user.fullName }
+        events.filter { $0.organizer == user.name }
     }
     
     var body: some View {

@@ -1,10 +1,3 @@
-//
-//  SignInPage.swift
-//  Chingu
-//
-//  Created by David Kim on 7/5/25.
-//
-
 import SwiftUI
 
 struct SignInPage: View {
@@ -46,6 +39,6 @@ struct SignInPage: View {
     private func handleSignIn() {
         withAnimation(.spring()) { authState = .authenticating }
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { withAnimation(.spring()) { authState = .success } }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { onSignIn(User(id: UUID(), fullName: "David Kim", university: "UCLA", email: email, profilePhoto: "", badges: mockBadges)) }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { onSignIn(User(id: 1, preferenceID: 1, email: email, name: "David Kim", school: "UCLA", profilePictureURL: "", badges: mockBadges)) }
     }
 }

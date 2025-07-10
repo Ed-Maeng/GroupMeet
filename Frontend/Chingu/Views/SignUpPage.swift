@@ -1,10 +1,3 @@
-//
-//  SignUpPage.swift
-//  Chingu
-//
-//  Created by David Kim on 7/5/25.
-//
-
 import SwiftUI
 
 struct SignUpPage: View {
@@ -36,6 +29,6 @@ struct SignUpPage: View {
     }
     
     private func handleSignUp() {
-        onSignUp(User(id: UUID(), fullName: fullName, university: university, email: email, profilePhoto: "", badges: mockBadges))
+        onSignUp(User(id: 1, preferenceID: 1, email: email, name: fullName, school: university, profilePictureURL: "", badges: mockBadges))
     }
 }

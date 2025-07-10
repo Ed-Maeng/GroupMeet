@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EventsFeedPage: View {
     var onEventSelected: (Event) -> Void
-    let universityName: String
+    let schoolName: String
     @Binding var selectedTab: ContentView.Tab
     @Binding var events: [Event]
     @State private var selectedCategory: String = "All"
@@ -20,7 +20,7 @@ struct EventsFeedPage: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 32) { trendingSection; allEventsSection }.padding(.vertical)
             }
-            .navigationTitle(universityName)
+            .navigationTitle(schoolName)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: { selectedTab = .profile }) {

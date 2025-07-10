@@ -40,8 +40,14 @@
 		15BD3CC02E1A31B600709DF6 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CBF2E1A31B300709DF6 /* University.swift */; };
 		15BD3CC22E1A31C700709DF6 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CC12E1A31C400709DF6 /* Interest.swift */; };
 		15BD3CC42E1A31DD00709DF6 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CC32E1A31DC00709DF6 /* Badge.swift */; };
-		15BD3CC72E1A323700709DF6 /* Color+Extensions.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CC62E1A322C00709DF6 /* Color+Extensions.swift.swift */; };
+		15BD3CC72E1A323700709DF6 /* Color+Extensions in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CC62E1A322C00709DF6 /* Color+Extensions */; };
 		15BD3CCB2E1A33BE00709DF6 /* Binding+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD3CCA2E1A33B600709DF6 /* Binding+Extensions.swift */; };
+		95B031752E1B9A6100535C6A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B031732E1B9A6100535C6A /* NetworkManager.swift */; };
+		95B031762E1B9A6100535C6A /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B031722E1B9A6100535C6A /* Keychain.swift */; };
+		95B031792E1B9A7800535C6A /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B031772E1B9A7800535C6A /* ProfileViewModel.swift */; };
+		95B0317B2E1F6AF000535C6A /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B0317A2E1F6AEC00535C6A /* Auth.swift */; };
+		95B0317F2E1F706300535C6A /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = 95B0317E2E1F706300535C6A /* JWTDecode */; };
+		95B031832E1F81B200535C6A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B031822E1F81AD00535C6A /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,8 +104,13 @@
 		15BD3CBF2E1A31B300709DF6 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
 		15BD3CC12E1A31C400709DF6 /* Interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		15BD3CC32E1A31DC00709DF6 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
-		15BD3CC62E1A322C00709DF6 /* Color+Extensions.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift.swift"; sourceTree = "<group>"; };
+		15BD3CC62E1A322C00709DF6 /* Color+Extensions */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Color+Extensions"; sourceTree = "<group>"; };
 		15BD3CCA2E1A33B600709DF6 /* Binding+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extensions.swift"; sourceTree = "<group>"; };
+		95B031722E1B9A6100535C6A /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		95B031732E1B9A6100535C6A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		95B031772E1B9A7800535C6A /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		95B0317A2E1F6AEC00535C6A /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		95B031822E1F81AD00535C6A /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -120,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B0317F2E1F706300535C6A /* JWTDecode in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +158,7 @@
 				15B120622E0CBCF500DA825A /* Chingu */,
 				15B120312E0CAFEF00DA825A /* ChinguTests */,
 				15B1203B2E0CAFEF00DA825A /* ChinguUITests */,
+				95B0317D2E1F706300535C6A /* Frameworks */,
 				15B120222E0CAFEE00DA825A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -163,6 +176,8 @@
 		15B120622E0CBCF500DA825A /* Chingu */ = {
 			isa = PBXGroup;
 			children = (
+				95B031782E1B9A7800535C6A /* ModelViews */,
+				95B031742E1B9A6100535C6A /* Helpers */,
 				15BD3CC52E1A322100709DF6 /* Extensions */,
 				15B120842E0CBDDB00DA825A /* Models */,
 				15B120782E0CBD9700DA825A /* Components */,
@@ -221,6 +236,8 @@
 		15B120842E0CBDDB00DA825A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				95B031822E1F81AD00535C6A /* Alert.swift */,
+				95B0317A2E1F6AEC00535C6A /* Auth.swift */,
 				15BD3CC32E1A31DC00709DF6 /* Badge.swift */,
 				15BD3CC12E1A31C400709DF6 /* Interest.swift */,
 				15BD3CBF2E1A31B300709DF6 /* University.swift */,
@@ -237,9 +254,33 @@
 			isa = PBXGroup;
 			children = (
 				15BD3CCA2E1A33B600709DF6 /* Binding+Extensions.swift */,
-				15BD3CC62E1A322C00709DF6 /* Color+Extensions.swift.swift */,
+				15BD3CC62E1A322C00709DF6 /* Color+Extensions */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		95B031742E1B9A6100535C6A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				95B031722E1B9A6100535C6A /* Keychain.swift */,
+				95B031732E1B9A6100535C6A /* NetworkManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		95B031782E1B9A7800535C6A /* ModelViews */ = {
+			isa = PBXGroup;
+			children = (
+				95B031772E1B9A7800535C6A /* ProfileViewModel.swift */,
+			);
+			path = ModelViews;
+			sourceTree = "<group>";
+		};
+		95B0317D2E1F706300535C6A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +300,7 @@
 			);
 			name = Chingu;
 			packageProductDependencies = (
+				95B0317E2E1F706300535C6A /* JWTDecode */,
 			);
 			productName = Chingu;
 			productReference = 15B120212E0CAFEE00DA825A /* Chingu.app */;
@@ -342,6 +384,9 @@
 			);
 			mainGroup = 15B120182E0CAFEE00DA825A;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				95B0317C2E1F6CFB00535C6A /* XCRemoteSwiftPackageReference "JWTDecode" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 15B120222E0CAFEE00DA825A /* Products */;
 			projectDirPath = "";
@@ -389,6 +434,7 @@
 				15BD3C852E1A2ABC00709DF6 /* SignInPage.swift in Sources */,
 				15BD3CB32E1A30D700709DF6 /* User.swift in Sources */,
 				15BD3CB12E1A305E00709DF6 /* AttendeeIconsView.swift in Sources */,
+				95B0317B2E1F6AF000535C6A /* Auth.swift in Sources */,
 				15BD3CA92E1A2FB400709DF6 /* ChatCard.swift in Sources */,
 				15BD3CA72E1A2F8A00709DF6 /* MyEventManagementCard.swift in Sources */,
 				15BD3C8B2E1A2BB000709DF6 /* SplashScreenView.swift in Sources */,
@@ -401,14 +447,18 @@
 				15BD3CB92E1A311400709DF6 /* Attendee1.swift in Sources */,
 				15BD3CA52E1A2F6100709DF6 /* TrendingEventCard.swift in Sources */,
 				15BD3C9F2E1A2EBA00709DF6 /* AttendeesListView.swift in Sources */,
+				95B031832E1F81B200535C6A /* Alert.swift in Sources */,
 				15BD3CAB2E1A2FC200709DF6 /* ChatBubble.swift in Sources */,
 				15BD3C972E1A2DFA00709DF6 /* ChatListPage.swift in Sources */,
 				15BD3CBC2E1A319000709DF6 /* Chat1.swift in Sources */,
 				15BD3CBE2E1A31A400709DF6 /* ChatMessage.swift in Sources */,
 				15BD3C9B2E1A2E4D00709DF6 /* EventDetailPage.swift in Sources */,
+				95B031752E1B9A6100535C6A /* NetworkManager.swift in Sources */,
+				95B031762E1B9A6100535C6A /* Keychain.swift in Sources */,
 				15BD3CAD2E1A300B00709DF6 /* SocialLoginButton.swift in Sources */,
 				15BD3C8D2E1A2C1500709DF6 /* ProfileSetupView.swift in Sources */,
-				15BD3CC72E1A323700709DF6 /* Color+Extensions.swift.swift in Sources */,
+				95B031792E1B9A7800535C6A /* ProfileViewModel.swift in Sources */,
+				15BD3CC72E1A323700709DF6 /* Color+Extensions in Sources */,
 				15BD3CCB2E1A33BE00709DF6 /* Binding+Extensions.swift in Sources */,
 				15BD3CC22E1A31C700709DF6 /* Interest.swift in Sources */,
 				15BD3CC42E1A31DD00709DF6 /* Badge.swift in Sources */,
@@ -742,6 +792,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		95B0317C2E1F6CFB00535C6A /* XCRemoteSwiftPackageReference "JWTDecode" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/JWTDecode.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		95B0317E2E1F706300535C6A /* JWTDecode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95B0317C2E1F6CFB00535C6A /* XCRemoteSwiftPackageReference "JWTDecode" */;
+			productName = JWTDecode;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 15B120192E0CAFEE00DA825A /* Project object */;
 }
